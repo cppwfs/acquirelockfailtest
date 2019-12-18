@@ -1,0 +1,20 @@
+== Application that demonstrates DefaultLockRepository hiccup
+
+=== Build the application
+```
+mvn clean package
+```
+
+=== Test the application
+* Setup datasource properties
+```
+export spring_datasource_driverClassName=oracle.jdbc.driver.OracleDriver
+export spring_datasource_password=<your password>
+export spring_datasource_url=jdbc:oracle:thin:@//localhost:1521/<your db>
+export spring_datasource_username=<your user name>
+```
+
+* Launch the application
+```
+java -jar taskfaildemo-0.0.1-SNAPSHOT.jar
+```
