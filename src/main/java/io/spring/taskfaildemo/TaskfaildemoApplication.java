@@ -1,13 +1,6 @@
 package io.spring.taskfaildemo;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.sql.SQLException;
-import java.util.Date;
-
 import javax.sql.DataSource;
-import oracle.jdbc.xa.client.OracleXADataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -66,14 +59,5 @@ public class TaskfaildemoApplication {
 	@FailedTask
 	public void afterTask(TaskExecution taskExecution, Exception exception) {
 		System.out.println("exception****");
-	}
-
-	@Bean
-	public DataSource dataSource() throws SQLException {
-		OracleXADataSource dataSource = new OracleXADataSource();
-		dataSource.setUser("system");
-		dataSource.setPassword("weblogic1");
-		dataSource.setURL("jdbc:oracle:thin:@//localhost:1521/ORCLCDB");
-		return dataSource;
 	}
 }

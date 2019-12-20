@@ -26,19 +26,5 @@ import org.springframework.boot.test.rule.OutputCapture;
 import static junit.framework.Assert.assertTrue;
 
 public class TestSignal {
-
-	@Rule
-	public OutputCapture outputCapture = new OutputCapture();
-	@Test
-	public void testMe() {
-		SpringApplicationBuilder app = new SpringApplicationBuilder(TaskfaildemoApplication.class);
-		app.build().addListeners(new ApplicationPidFileWriter("/Users/glennrenfro/project/samples/taskfaildemo/shutdown.pid"));
-		app.run();
-
-		assertTrue(outputCapture.toString().contains("TaskExecution with executionId=1 with the following {exitCode=130"));
-	}
-
-	@Test
-	public void anothertest() {
-	}
+	
 }
