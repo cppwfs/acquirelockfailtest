@@ -55,11 +55,11 @@
 			<groupId>org.springframework.integration</groupId>
 			<artifactId>spring-integration-jdbc</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.oracle.jdbc</groupId>
-			<artifactId>ojdbc6</artifactId>
-			<version>12.1.0.2</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.oracle.jdbc</groupId>-->
+<!--			<artifactId>ojdbc6</artifactId>-->
+<!--			<version>12.1.0.2</version>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
